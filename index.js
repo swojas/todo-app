@@ -8,7 +8,7 @@ app.use(parse.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb+srv://swojas:w5RNHCCu3Q8f1Ppz@cluster0.6ylqvbd.mongodb.net/todolistDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://swojas:w5RNHCCu3Q8f1Ppz@cluster0.6ylqvbd.mongodb.net/todolistDB?retryWrites=true&w=majority", { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 
 const TasksSchema = new mongoose.Schema({
     task: { type: String }
